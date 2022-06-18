@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-import heroBackgroundImg from '../../assets/img/hero-bg-img.jpg'
 
 const StyledHeroSection = styled.section`
     height: 500px;
     padding: 1em;
     max-width: 100%;
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroBackgroundImg});
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/img/hero-bg-img.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
