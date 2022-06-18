@@ -16,7 +16,6 @@ const StyledHeroSection = styled.section`
 
         p {
             margin-bottom: 1.5em;
-            font-weight: 300;
         }
 
         h1 {

@@ -2,6 +2,7 @@ import StyledApp from "./styles/App.styled";
 
 import NavBar from "./NavBar";
 import HeroSection from "./HeroSection";
+import SubHeroSection from "./SubHeroSection";
 
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <StyledApp>
       <NavBar />
       <HeroSection />
+      <SubHeroSection />
     </StyledApp>
   );
 }
