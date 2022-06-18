@@ -5,7 +5,7 @@ import StyledApp from "./styles/App.styled";
 import NavBar from "./NavBar";
 import HeroSection from "./HeroSection";
 import SubHeroSection from "./SubHeroSection";
-import ClientCard from "./ClientCard";
+import ClientCardContainer from "./ClientCardContainer";
 
 
 const App = () => {
@@ -184,11 +184,7 @@ const App = () => {
       <NavBar />
       <HeroSection />
       <SubHeroSection />
-      <ClientCard data={data.work[0]} />
-      <ClientCard data={data.work[1]} />
-      <ClientCard data={data.work[2]} />
-      <ClientCard data={data.work[3]} />
-      <ClientCard data={data.work[4]} />
+      <ClientCardContainer data={data.work} />
     </StyledApp>
   );
 }
