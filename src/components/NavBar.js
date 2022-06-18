@@ -1,4 +1,5 @@
 import StyledNavBar from './styles/NavBar.styled'
+import Logo from '../assets/img/dept-logo-2022-black.svg'
 
 import { useState } from 'react';
 
@@ -13,7 +14,7 @@ const NavBar = () => {
 
   return (
     <StyledNavBar>
-      <img src="/src/assets/img/dept-logo-2022-black.png" alt="Dept logo" />
+      <img src={Logo} alt="Dept logo" />
       <button onClick={handleClick}>MENU</button>
     </StyledNavBar>
   );
