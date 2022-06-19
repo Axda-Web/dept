@@ -7,7 +7,7 @@ const ClientCardContainer = ({ data }) => {
 
     return (
         <StyledClientCardContainer>
-            { data.slice(0, 5).map( work => <ClientCard key={work.id} data={work} /> ) }
+            { data.map( work => <ClientCard key={work.id} data={work} /> ) }
         </StyledClientCardContainer>
     )
 }

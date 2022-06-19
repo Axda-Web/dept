@@ -6,7 +6,7 @@ const ClientNoteContainer = ({ data }) => {
 
     return (
         <StyledClientNoteContainer>
-            { data.slice(5, 8).map( work => <ClientNote key={work.id} data={work} /> ) }
+            { data.map( work => <ClientNote key={work.id} data={work} /> ) }
         </StyledClientNoteContainer>
     )
 }

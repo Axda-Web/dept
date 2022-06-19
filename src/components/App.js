@@ -7,6 +7,7 @@ import HeroSection from "./HeroSection";
 import SubHeroSection from "./SubHeroSection";
 import ClientCardContainer from "./ClientCardContainer";
 import ClientNoteContainer from "./ClientNoteContainer";
+import ClientQuote from "./ClientQuote";
 
 
 const App = () => {
@@ -185,8 +186,12 @@ const App = () => {
       <NavBar />
       <HeroSection />
       <SubHeroSection />
-      <ClientCardContainer data={data.work} />
-      <ClientNoteContainer data={data.work} />
+      <ClientCardContainer data={data.work.slice(0, 5)} />
+      <ClientNoteContainer data={data.work.slice(5, 8)} />
+      <ClientCardContainer data={data.work.filter( work => work.id === 9 || work.id === 10 || work.id === 14 )} />
+      <ClientNoteContainer data={data.work.slice(10, 13)} /> 
+      <ClientCardContainer data={data.work.slice(14, 18)} />
+      <ClientQuote />
     </StyledApp>
   );
 }
