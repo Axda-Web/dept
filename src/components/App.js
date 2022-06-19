@@ -87,7 +87,7 @@ const App = () => {
             id: 14,
             brand: "FLORENSIS",
             title: "Rethinking the entire online ecosystem",
-            img_url: ""
+            img_url: "./assets/img/work/florensis2-card-bg-img.jpg"
         }, {
             id: 15,
             brand: "CHOCOMEL",
@@ -185,24 +185,51 @@ const App = () => {
 
 
   /* Manage Form section state */
-  const [ form, setForm ] = useState({
+  const [ formValues, setFormValues ] = useState({
     name: '',
     email: '',
     message: ''
   })
+  const [ formErrors, setFormErrors ] = useState({})
+  const [ formSubmit, setFormSubmit ] = useState(false)
 
   const handleFormChange = e => {
 
     const { name, value } = e.target
 
-    setForm( prev => ({
+    setFormValues( prev => ({
       ...prev,
       [name]: value
     }))
   }
 
+  const formValidation = (values) => {
+
+    const errors = {}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
+    const requiredErrorMessage = 'This field is required'
+
+    if (!formValues.name) {
+      errors.nameError = requiredErrorMessage
+    }
+
+    if (!formValues.email) {
+      errors.emailError = requiredErrorMessage
+    } else if (!regex.test(formValues.email)) {
+      errors.emailError = "This is not a valid email format";
+    }
+    if (!formValues.message) {
+      errors.messageError = requiredErrorMessage
+    } 
+
+    return errors;
+
+  }   
+
   const handleFormSubmit = e => {
     e.preventDefault()
+    setFormErrors(formValidation(formValues))
+    setFormSubmit(true)
   }
   /* Manage Form section state END */
 
@@ -235,7 +262,9 @@ const App = () => {
       <ClientQuote />
       <ClientCardContainer data={data.work.slice(18)} />
       <ClientList data={data.brands} />
-      <Form form={form}
+      <Form formValues={formValues}
+            formErrors={formErrors}
+            formSubmit={formSubmit}
             handleFormChange={handleFormChange}
             handleFormSubmit={handleFormSubmit}
           />

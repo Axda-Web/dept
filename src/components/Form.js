@@ -1,19 +1,26 @@
 import StyledForm from "./styles/Form.styled"
 
-const Form = ({ form, handleFormChange, handleFormSubmit }) => {
+import { BsFillCheckCircleFill } from 'react-icons/bs'
+
+const Form = ({ formValues, formErrors, formSubmit, handleFormChange, handleFormSubmit }) => {
 
     return (
         <StyledForm>
             <h2 className="form-heading">QUESTION? WE ARE HERE TO HELP!</h2>
-            <form className="form" onSubmit={handleFormSubmit}>
+            <form className="form" onSubmit={handleFormSubmit} noValidate>
                 <label htmlFor="name">NAME</label>
-                <input type="text" id="name" name="name" value={form.name} onChange={handleFormChange} />
+                <input className={ formErrors.nameError ? 'invalid' : null } type="text" id="name" name="name" value={formValues.name} onChange={handleFormChange} />
+                <p className="form__error-message">{formErrors.nameError}</p>
 
                 <label htmlFor="email">EMAIL</label>
-                <input type="email" id="email" name="email" value={form.email} onChange={handleFormChange} />
+                <input className={ formErrors.emailError ? 'invalid' : null } type="email" id="email" name="email" value={formValues.email} onChange={handleFormChange} />
+                <p className="form__error-message">{formErrors.emailError}</p>
 
                 <label htmlFor="message">MESSAGE</label>
-                <textarea name="message" id="message" rows="5" value={form.message} onChange={handleFormChange} />
+                <textarea className={ formErrors.messageError ? 'invalid' : null } name="message" id="message" rows="5" value={formValues.message} onChange={handleFormChange} />
+                <p className="form__error-message">{formErrors.messageError}</p>
+
+                { Object.keys(formErrors).length === 0 && formSubmit ? (<p className="form__success-message">Your submission has been sent <BsFillCheckCircleFill style={{ color: '#5CB85C' }} /></p>) : null }
 
                 <input className="form__btn" type="submit" value="SEND" />
             </form> 

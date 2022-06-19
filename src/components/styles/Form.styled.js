@@ -16,6 +16,10 @@ const StyledForm = styled.section`
         border: none;
         border-bottom: 1px solid #DDD;
         resize: none;
+
+        &.invalid {
+        border-bottom: 1px solid #D9534F;
+        }
     }
 
     label {
@@ -26,6 +30,7 @@ const StyledForm = styled.section`
     input, textarea {
         font-size: 1.125rem;
         font-family: 'Lato', sans-serif;
+        font-weight: 300;
     }
 
     .form__btn {
@@ -41,6 +46,20 @@ const StyledForm = styled.section`
             color: #fff;
             background-color: #000;
         }
+    }
+
+    .form__error-message {
+        color: #D9534F;
+        margin-top: .75em;
+    }
+
+    .form__success-message {
+        margin-top: 2em;
+        color: #5CB85C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 5px;
     }
 
 `
