@@ -9,6 +9,7 @@ import ClientCardContainer from "./ClientCardContainer";
 import ClientNoteContainer from "./ClientNoteContainer";
 import ClientQuote from "./ClientQuote";
 import ClientList from "./ClientList";
+import Form from "./Form";
 
 
 const App = () => {
@@ -170,6 +171,30 @@ const App = () => {
     ]
   })
 
+  // Manage Form section state
+
+  const [ form, setForm ] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+
+  const handleFormChange = e => {
+
+    const { name, value } = e.target
+
+    setForm( prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleFormSubmit = e => {
+    e.preventDefault()
+  }
+
+
+
 
   /* useEffect( () => {
 
@@ -195,6 +220,10 @@ const App = () => {
       <ClientQuote />
       <ClientCardContainer data={data.work.slice(18)} />
       <ClientList data={data.brands} />
+      <Form form={form}
+            handleFormChange={handleFormChange}
+            handleFormSubmit={handleFormSubmit}
+          />
     </StyledApp>
   );
 }
