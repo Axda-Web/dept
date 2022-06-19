@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import StyledApp from "./styles/App.styled";
 
 import NavBar from "./NavBar";
+import Menu from "./Menu";
 import HeroSection from "./HeroSection";
 import SubHeroSection from "./SubHeroSection";
 import ClientCardContainer from "./ClientCardContainer";
@@ -172,8 +173,18 @@ const App = () => {
     ]
   })
 
-  // Manage Form section state
 
+  /* Manage showMenu state */
+  const [ showMenu, setShowMenu ] = useState(false)
+
+  const handleMenuBtnClick = () => {
+    setShowMenu(!showMenu)
+  }
+  /* Manage showMenu state END */
+
+
+
+  /* Manage Form section state */
   const [ form, setForm ] = useState({
     name: '',
     email: '',
@@ -193,6 +204,8 @@ const App = () => {
   const handleFormSubmit = e => {
     e.preventDefault()
   }
+  /* Manage Form section state END */
+
 
 
 
@@ -210,7 +223,8 @@ const App = () => {
 
   return (
     <StyledApp>
-      <NavBar />
+      { showMenu ? <Menu handleMenuBtnClick={handleMenuBtnClick} /> : (<>
+      <NavBar handleMenuBtnClick={handleMenuBtnClick} />
       <HeroSection />
       <SubHeroSection />
       <ClientCardContainer data={data.work.slice(0, 5)} />
@@ -226,6 +240,7 @@ const App = () => {
             handleFormSubmit={handleFormSubmit}
           />
       <Footer />
+      </>)}
     </StyledApp>
   );
 }

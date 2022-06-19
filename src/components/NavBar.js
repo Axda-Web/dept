@@ -5,18 +5,12 @@ import { useState } from 'react';
 
 
 
-const NavBar = () => {
-
-    const [ showMenu, setShowMenu ] = useState(false)
-
-    const handleClick = () => {
-
-    }
+const NavBar = ({ handleMenuBtnClick }) => {
 
   return (
     <StyledNavBar>
       <img src={'./assets/img/dept-logo-2022-black.svg'} alt="Dept logo" />
-      <button onClick={handleClick}>MENU</button>
+      <button onClick={handleMenuBtnClick}>MENU</button>
     </StyledNavBar>
   );
 }
