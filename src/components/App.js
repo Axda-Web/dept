@@ -8,6 +8,7 @@ import SubHeroSection from "./SubHeroSection";
 import ClientCardContainer from "./ClientCardContainer";
 import ClientNoteContainer from "./ClientNoteContainer";
 import ClientQuote from "./ClientQuote";
+import ClientList from "./ClientList";
 
 
 const App = () => {
@@ -126,45 +127,45 @@ const App = () => {
             name: "Levis",
             logo_url: "./assets/img/brands/levis-logo.svg"
         }, {
-            id: 102,
-            name: "Netflix",
-            logo_url: "./assets/img/brands/netflix-logo.svg"
+          id: 103,
+          name: "Spotify",
+          logo_url: "./assets/img/brands/spotify-logo.svg"
         }, {
-            id: 103,
-            name: "Spotify",
-            logo_url: "./assets/img/brands/spotify-logo.svg"
+          id: 104,
+          name: "Patagonia",
+          logo_url: "./assets/img/brands/patagonia-logo.svg"
         }, {
-            id: 104,
-            name: "Patagonia",
-            logo_url: "./assets/img/brands/patagonia-logo.svg"
+          id: 106,
+          name: "Adyen",
+          logo_url: "./assets/img/brands/adyen-logo.svg"
         }, {
-            id: 105,
-            name: "Fujitsu",
-            logo_url: "./assets/img/brands/fujitsu-logo.svg"
+          id: 107,
+          name: "Audi",
+          logo_url: "./assets/img/brands/audi-logo.svg"
         }, {
-            id: 106,
-            name: "Adyen",
-            logo_url: "./assets/img/brands/adyen-logo.svg"
+          id: 109,
+          name: "Tesla",
+          logo_url: "./assets/img/brands/tesla-logo.svg"
         }, {
-            id: 107,
-            name: "Audi",
-            logo_url: "./assets/img/brands/audi-logo.svg"
+          id: 110,
+          name: "Asos",
+          logo_url: "./assets/img/brands/asos-logo.svg"
         }, {
-            id: 108,
-            name: "Triumph",
-            logo_url: "./assets/img/brands/triumph-logo.svg"
+          id: 108,
+          name: "Triumph",
+          logo_url: "./assets/img/brands/triumph-logo.svg"
         }, {
-            id: 109,
-            name: "Tesla",
-            logo_url: "./assets/img/brands/tesla-logo.svg"
+          id: 102,
+          name: "Netflix",
+          logo_url: "./assets/img/brands/netflix-logo.svg"
         }, {
-            id: 110,
-            name: "Asos",
-            logo_url: "./assets/img/brands/asos-logo.svg"
+          id: 111,
+          name: "Takeaway",
+          logo_url: "./assets/img/brands/takeaway-logo.svg"
         }, {
-            id: 111,
-            name: "Takeaway",
-            logo_url: "./assets/img/brands/takeaway-logo.svg"
+          id: 105,
+          name: "Fujitsu",
+          logo_url: "./assets/img/brands/fujitsu-logo.svg"
         }
     ]
   })
@@ -192,6 +193,8 @@ const App = () => {
       <ClientNoteContainer data={data.work.slice(10, 13)} /> 
       <ClientCardContainer data={data.work.slice(14, 18)} />
       <ClientQuote />
+      <ClientCardContainer data={data.work.slice(18)} />
+      <ClientList data={data.brands} />
     </StyledApp>
   );
 }
