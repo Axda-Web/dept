@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const StyledSubHeroSection = styled.section`
     padding: 1.5em;
     background-color: #000;
-    color: rgba(255, 255, 255, .5);
+    color: #646464;
     display: flex;
     justify-content: space-between;
 

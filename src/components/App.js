@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import HeroSection from "./HeroSection";
 import SubHeroSection from "./SubHeroSection";
 import ClientCardContainer from "./ClientCardContainer";
+import ClientNoteContainer from "./ClientNoteContainer";
 
 
 const App = () => {
@@ -185,6 +186,7 @@ const App = () => {
       <HeroSection />
       <SubHeroSection />
       <ClientCardContainer data={data.work} />
+      <ClientNoteContainer data={data.work} />
     </StyledApp>
   );
 }

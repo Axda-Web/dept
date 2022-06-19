@@ -4,7 +4,7 @@ const StyledClientCard = styled.article`
     height: 500px;
     padding: 1.5em;
     max-width: 100%;
-    background:linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(${ ({backgroundImg}) => backgroundImg });
+    background:linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(${ ({backgroundImg}) => backgroundImg });
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
