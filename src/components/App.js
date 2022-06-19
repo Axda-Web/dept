@@ -10,6 +10,7 @@ import ClientNoteContainer from "./ClientNoteContainer";
 import ClientQuote from "./ClientQuote";
 import ClientList from "./ClientList";
 import Form from "./Form";
+import Footer from "./Footer";
 
 
 const App = () => {
@@ -224,6 +225,7 @@ const App = () => {
             handleFormChange={handleFormChange}
             handleFormSubmit={handleFormSubmit}
           />
+      <Footer />
     </StyledApp>
   );
 }
