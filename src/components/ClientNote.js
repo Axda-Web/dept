@@ -6,7 +6,7 @@ const ClientNote = ({ data }) => {
         <StyledClientNote>
             <h3 className="note__brand">{data.brand}</h3>
             <p className="note__title">{data.title}</p>
-            <p className="note__link"> <a href=""> Read more</a></p>
+            <div className="note__link"><img src="./assets/img/point-circle.svg" alt="" /> <a href=""> Read more</a></div>
         </StyledClientNote>
     )
 

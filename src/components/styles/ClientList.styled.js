@@ -16,15 +16,25 @@ const StyledClientList = styled.section`
     }
 
     .client-grid {
-        margin-top: 4em;
+        margin: 4em 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
-        gap: 100px;
+        column-gap: 100px;
+        row-gap: 70px;
+
+        @media (min-width: 860px) {
+            grid-template-columns: repeat(3, 1fr);
+            margin: 4em;
+        }
 
         .client-logo {
             width: 120px;
             height: auto;
+
+            @media (min-width: 860px) {
+                width: 140px;
+        }
         }
     }
 `

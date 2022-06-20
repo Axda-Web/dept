@@ -7,7 +7,7 @@ const ClientCard = ({ data }) => {
         <div className="card-text">
             <h3 className="card__brand">{data.brand}</h3>
             <p className="card__title">{data.title}</p>
-            <p className="card__link"> <a href=""> Read more</a></p>
+            <div className="card__link"><img src="./assets/img/point-circle.svg" alt="" /> <a href=""> Read more</a></div>
         </div>
 
     </StyledClientCard>

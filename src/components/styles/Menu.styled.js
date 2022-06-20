@@ -31,6 +31,11 @@ const StyledMenu = styled.section`
         font-size: 2.375rem;
         border-bottom: 1px solid #A3A3A3;
         padding-top: .3em;
+        transition: transform .3s;
+
+        &:hover {
+            transform: translate(-30px);
+        }
 
         a, a:visited, a:active {
             color: inherit;
@@ -41,10 +46,13 @@ const StyledMenu = styled.section`
     }
 
     .country-nav {
+        z-index: 100;
         display: none;
         position: absolute;
-        top: 6,375em;
-        left: 3,4375em;
+        background-color: #000;
+        padding: 1em 3em;
+        top: 80px;
+        left: 0px;
 
         .heading {
             color: rgba(255, 255, 255, .5);
@@ -53,6 +61,11 @@ const StyledMenu = styled.section`
         li {
             list-style: none;
             padding-top: .3em;
+            transition: transform .3s;
+
+            &:hover {
+                transform: translate(10px);
+            }
 
             a, a:visited, a:active {
             color: inherit;
@@ -62,7 +75,17 @@ const StyledMenu = styled.section`
         }
     }
 
-    
+    @media (min-width: 992px){
+        .country-nav {
+            display: block;
+        }
+    }
+
+    @media (min-width: 1200px){
+        .main-nav li {
+            font-size: 3.75rem;
+        }
+    }
     
 `
 
