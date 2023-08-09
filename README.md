@@ -54,4 +54,4 @@ To get started with the Dept project, follow the steps below:
    npm start
    ```
 
-A deployed version of the Dept project is available on Vercel at [Dept](https://dept-beryl.vercel.app/).
+A deployed version of the Dept project is available on Vercel at [Dept](https://dept-henna.vercel.app/).
